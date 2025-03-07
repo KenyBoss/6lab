@@ -1,3 +1,6 @@
+
+
+
 /**
  * This class implements a technical support system. It is the top level class 
  * in this project. The support system communicates via text input/output 
@@ -16,6 +19,8 @@ public class SupportSystem
     private InputReader reader;
     private Responder responder;
     
+    
+    
     /**
      * Creates a technical support system.
      */
@@ -24,7 +29,11 @@ public class SupportSystem
         reader = new InputReader();
         responder = new Responder();
     }
-
+    private void fillResponses(){}
+    
+    
+    
+    
     /**
      * Start the technical support system. This will print a welcome
      * message and enter into a dialog with the user, until the user
@@ -43,7 +52,7 @@ public class SupportSystem
                 finished = true;
             }
             else {
-                String response = responder.generateResponse();
+                String response = responder.generateResponse(input);
                 System.out.println(response);
             }
         }
